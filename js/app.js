@@ -92,7 +92,7 @@ class ColorPanel extends React.Component {
                         )
                     }
                 </nav>
-                <label>You picked the follwoing colors:</label>
+                <label>You picked the following colors:</label>
                 <ul>
                     {
                         this.state.items
