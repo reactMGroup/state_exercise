@@ -1,0 +1,26 @@
+.boxclass {
+    height: 5rem;
+    width: 5rem;
+    background-color: aquamarine;
+    margin-top: 0.2rem;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#colorsNav {
+    display: flex;
+}
+
+.colorinput {
+    padding: 0.2rem;
+    border: 0.1rem solid darkgrey;
+    border-radius: 5%;
+    background-color: darksalmon;
+}
+
+.colorinput.unwanted {
+    background-color: lightgrey;
+    color: darkgray;
+}
