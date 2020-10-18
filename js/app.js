@@ -52,8 +52,8 @@ class ColorInput extends React.Component {
     static defaultProps = {
         color: "Define caption",
         disabled: false,
-        processClick: function (id, disabled, componentThis) {
-            console.log(`Default processing ${id} is ${disabled} in ${componentThis}`);
+        processClick: function (id, disabled) {
+            console.log(`Default processing ${id} is ${disabled}`);
         }
     }
 
@@ -66,7 +66,7 @@ class ColorInput extends React.Component {
     elementClicked() {
         this.setState(prev => {
             const newValue = !prev.disabled;
-            this.props.processClick(this.props.color, newValue, this);
+            this.props.processClick(this.props.color, newValue);
             return { disabled: newValue };
         });
     }
