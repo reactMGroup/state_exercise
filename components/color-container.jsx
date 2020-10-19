@@ -30,15 +30,10 @@ class ColorPanel extends React.Component {
     itemUpdated(id, newDisabled) {
         this.setState(prev => {
             const newState = prev.items.map(item => {
-                if (id === item.color) {
-                    return {
-                        color: item.color,
-                        disabled: newDisabled
-                    };
-                } else {
-                    return item;
-                }
-
+                return id === item.color ? {
+                    color: item.color,
+                    disabled: newDisabled
+                } : item;
             });
             return { items: newState };
         });
@@ -46,14 +41,14 @@ class ColorPanel extends React.Component {
 
     render() {
         const colorInputs =
-         this.state.items.map(item =>(
-                <ColorInput 
-                    key={item.color} 
-                    color={item.color} 
-                    disabled={item.disabled} 
-                    processClick={this.itemUpdated} 
+            this.state.items.map(item => (
+                <ColorInput
+                    key={item.color}
+                    color={item.color}
+                    disabled={item.disabled}
+                    processClick={this.itemUpdated}
                 />)
-                );
+            );
         return (
             <article>
                 <h2>Which colors do you want?</h2>
