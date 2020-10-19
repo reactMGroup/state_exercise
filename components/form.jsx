@@ -17,7 +17,7 @@ class FormComp extends React.Component {
             <label htmlFor="name">Name</label>
             <input onChange={event => this.updateField('name', event)} id='name' type='text' placeholder='Your name' />
             <label htmlFor="company">Name</label>
-            <input onChange={event => this.updateField('', event)} id='company' type='text' placeholder='Company' />
+            <input onChange={event => this.updateField('company', event)} id='company' type='text' placeholder='Company' />
             <p>You entered: {this.state.name} works at {this.state.company} </p>
         </article>)
     }
