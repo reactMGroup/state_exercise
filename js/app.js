@@ -14,3 +14,8 @@ ReactDOM.render(
     <MainWindow />,
     document.getElementById('app')
 );
+
+ReactDOM.render(
+    <FormComp />,
+    document.getElementById('form')
+);
